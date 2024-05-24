@@ -1,0 +1,8 @@
+<!-- camel-k: dependency=mvn:org.apache.camel.springboot:camel-spring-boot-starter -->
+<!-- camel-k: dependency=mvn:org.springframework.boot:spring-boot-starter -->
+<routes xmlns="http://camel.apache.org/schema/spring">
+    <route id="myRoute">
+        <from uri="timer:tick?period=1000"/>
+        <log message="Camel route running with camel-spring-boot-starter and spring-boot-starter"/>
+    </route>
+</routes>
